@@ -17,5 +17,16 @@ namespace Jogo_da_Memória
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Random random = new Random();
+
+            List<string> icons = new List<string>()
+            {
+                "!", "!", "N", "N", ",", ",", "K", "K",
+                "b", "b", "v", "v", "w", "w", "z", "z"
+            };
+
+        }
     }
 }
