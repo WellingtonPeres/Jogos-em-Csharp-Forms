@@ -1,0 +1,18 @@
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\bin\Debug\net5.0-windows\Adivinhe se Puder.exe
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\bin\Debug\net5.0-windows\Adivinhe se Puder.deps.json
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\bin\Debug\net5.0-windows\Adivinhe se Puder.runtimeconfig.json
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\bin\Debug\net5.0-windows\Adivinhe se Puder.runtimeconfig.dev.json
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\bin\Debug\net5.0-windows\Adivinhe se Puder.dll
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\bin\Debug\net5.0-windows\ref\Adivinhe se Puder.dll
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\bin\Debug\net5.0-windows\Adivinhe se Puder.pdb
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\obj\Debug\net5.0-windows\Adivinhe se Puder.csprojAssemblyReference.cache
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\obj\Debug\net5.0-windows\Adivinhe_se_Puder.Form1.resources
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\obj\Debug\net5.0-windows\Adivinhe se Puder.csproj.GenerateResource.cache
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\obj\Debug\net5.0-windows\Adivinhe se Puder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\obj\Debug\net5.0-windows\Adivinhe se Puder.AssemblyInfoInputs.cache
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\obj\Debug\net5.0-windows\Adivinhe se Puder.AssemblyInfo.cs
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\obj\Debug\net5.0-windows\Adivinhe se Puder.csproj.CoreCompileInputs.cache
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\obj\Debug\net5.0-windows\Adivinhe se Puder.dll
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\obj\Debug\net5.0-windows\ref\Adivinhe se Puder.dll
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\obj\Debug\net5.0-windows\Adivinhe se Puder.pdb
+C:\Users\55619\source\repos\Jogos-em-Csharp-Forms\Adivinhe se Puder\Adivinhe se Puder\obj\Debug\net5.0-windows\Adivinhe se Puder.genruntimeconfig.cache
