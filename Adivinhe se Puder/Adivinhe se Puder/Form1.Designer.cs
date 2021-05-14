@@ -84,6 +84,7 @@ namespace Adivinhe_se_Puder
             // 
             // txtChutarValorAleatorio
             // 
+            this.txtChutarValorAleatorio.Enabled = false;
             this.txtChutarValorAleatorio.Font = new System.Drawing.Font("Miriam CLM", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChutarValorAleatorio.Location = new System.Drawing.Point(178, 165);
             this.txtChutarValorAleatorio.Name = "txtChutarValorAleatorio";
@@ -93,6 +94,7 @@ namespace Adivinhe_se_Puder
             // 
             // btnTestarChute
             // 
+            this.btnTestarChute.Enabled = false;
             this.btnTestarChute.Font = new System.Drawing.Font("Miriam CLM", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnTestarChute.Location = new System.Drawing.Point(153, 225);
             this.btnTestarChute.Name = "btnTestarChute";

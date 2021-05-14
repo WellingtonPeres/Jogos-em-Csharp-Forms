@@ -24,6 +24,9 @@ namespace Adivinhe_se_Puder
             Random rand = new Random();
             numeroSorteado = rand.Next(0, 10);
             lblValorAleatorio.Text = numeroSorteado.ToString();
+            btnGerarValorAleatorio.Enabled = false;
+            btnTestarChute.Enabled = true;
+            txtChutarValorAleatorio.Enabled = true;
         }
 
         private void btnTestarChute_Click(object sender, EventArgs e)
@@ -33,9 +36,15 @@ namespace Adivinhe_se_Puder
             {
                 MessageBox.Show("Parabéns... Você acertou!!!");
             }
+            else if (numeroChute > numeroSorteado)
+            {
+                MessageBox.Show("Que pena... Você errou!!!\n" +
+                    "O número que eu pensei é menor.", "Mensagem");
+            }
             else
             {
-                MessageBox.Show("Que pena... Você errou!!!");
+                MessageBox.Show("Que pena... Você errou!!!\n" +
+                    "O número que eu pensei é maior.", "Mensagem");
             }
             ltbNumerosTentados.Items.Add(numeroChute);
         }
