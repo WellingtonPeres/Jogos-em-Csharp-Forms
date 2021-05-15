@@ -10,23 +10,29 @@ using System.Windows.Forms;
 
 namespace Adivinhe_se_Puder
 {
-    public partial class Form1 : Form
+    public partial class btnJogarNovamente : Form
     {
         int numeroSorteado;
+        int numeroTentativas = 3;
 
-        public Form1()
+    public btnJogarNovamente()
         {
             InitializeComponent();
+            lblNumeroTentativas.Text = numeroTentativas.ToString();
         }
 
         private void btnGerarValorAleatorio_Click(object sender, EventArgs e)
         {
             Random rand = new Random();
             numeroSorteado = rand.Next(0, 10);
-            lblValorAleatorio.Text = numeroSorteado.ToString();
             btnGerarValorAleatorio.Enabled = false;
             btnTestarChute.Enabled = true;
             txtChutarValorAleatorio.Enabled = true;
+
+            lblTituloInterativo.Text = "Estou pensando em um número de 0 a 10. " +
+                                       "Tente adivinhar...";
+
+            btnJogarDeNovo.Enabled = true;
         }
 
         private void btnTestarChute_Click(object sender, EventArgs e)
@@ -34,19 +40,53 @@ namespace Adivinhe_se_Puder
             int numeroChute = int.Parse(txtChutarValorAleatorio.Text);
             if (numeroChute == numeroSorteado)
             {
-                MessageBox.Show("Parabéns... Você acertou!!!");
+                MessageBox.Show("VOCÊ ACERTOU!!!", "PARABÉNS");
             }
             else if (numeroChute > numeroSorteado)
             {
-                MessageBox.Show("Que pena... Você errou!!!\n" +
-                    "O número que eu pensei é menor.", "Mensagem");
+                VerificacaoDeDerrota();
+                lblTituloInterativo.Text = "Que pena... Você errou!!!" +
+                                           "O número que eu pensei é menor.";
+                numeroTentativas--;
+                lblNumeroTentativas.Text = numeroTentativas.ToString();
             }
             else
             {
-                MessageBox.Show("Que pena... Você errou!!!\n" +
-                    "O número que eu pensei é maior.", "Mensagem");
+                VerificacaoDeDerrota();
+                lblTituloInterativo.Text = "Que pena... Você errou!!!" +
+                                           "O número que eu pensei é maior.";
+                numeroTentativas--;
+                lblNumeroTentativas.Text = numeroTentativas.ToString();
             }
             ltbNumerosTentados.Items.Add(numeroChute);
+            txtChutarValorAleatorio.Clear();
+        }
+
+        private void VerificacaoDeDerrota()
+        {
+            if (numeroTentativas == 1)
+            {
+                MessageBox.Show("Que trisque, Você perdeu!!!", "DERROTA");
+                txtChutarValorAleatorio.Enabled = false;
+                btnTestarChute.Enabled = false;
+            }
+        }
+
+        private void btnJogarDeNovo_Click(object sender, EventArgs e)
+        {
+            btnGerarValorAleatorio.Enabled = true;
+
+            txtChutarValorAleatorio.Enabled = false;
+            txtChutarValorAleatorio.Clear();
+
+            btnTestarChute.Enabled = false;
+
+            ltbNumerosTentados.Items.Clear();
+
+            lblTituloInterativo.Text = "Adivinhe se Puder!";
+            btnJogarDeNovo.Enabled = false;
+            numeroTentativas = 3;
+            lblNumeroTentativas.Text = numeroTentativas.ToString();
         }
     }
 }
