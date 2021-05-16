@@ -49,6 +49,7 @@ namespace Adivinhe_se_Puder
         {
             if (e.KeyCode == Keys.Return && txtChutarValorAleatorio.Text != "")
             {
+                e.SuppressKeyPress = true;
                 if (int.Parse(txtChutarValorAleatorio.Text) == numeroSorteado)
                 {
                     MessageBox.Show("VOCÊ ACERTOU!!!", "PARABÉNS");
