@@ -24,7 +24,7 @@ namespace Adivinhe_se_Puder
         private void btnGerarValorAleatorio_Click(object sender, EventArgs e)
         {
             Random rand = new Random();
-            numeroSorteado = rand.Next(0, 1);
+            numeroSorteado = rand.Next(0, 10);
             btnGerarValorAleatorio.Enabled = false;
             txtChutarValorAleatorio.Enabled = true;
             ltbNumerosTentados.Items.Clear();
