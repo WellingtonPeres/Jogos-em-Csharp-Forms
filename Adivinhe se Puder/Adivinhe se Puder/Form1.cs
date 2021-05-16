@@ -24,42 +24,15 @@ namespace Adivinhe_se_Puder
         private void btnGerarValorAleatorio_Click(object sender, EventArgs e)
         {
             Random rand = new Random();
-            numeroSorteado = rand.Next(0, 10);
+            numeroSorteado = rand.Next(0, 1);
             btnGerarValorAleatorio.Enabled = false;
-            btnTestarChute.Enabled = true;
             txtChutarValorAleatorio.Enabled = true;
+            ltbNumerosTentados.Items.Clear();
+            numeroTentativas = 3;
+            lblNumeroTentativas.Text = numeroTentativas.ToString();
 
             lblTituloInterativo.Text = "Estou pensando em um número de 0 a 10. " +
                                        "Tente adivinhar...";
-
-            btnJogarDeNovo.Enabled = true;
-        }
-
-        private void btnTestarChute_Click(object sender, EventArgs e)
-        {
-            int numeroChute = int.Parse(txtChutarValorAleatorio.Text);
-            if (numeroChute == numeroSorteado)
-            {
-                MessageBox.Show("VOCÊ ACERTOU!!!", "PARABÉNS");
-            }
-            else if (numeroChute > numeroSorteado)
-            {
-                VerificacaoDeDerrota();
-                lblTituloInterativo.Text = "Que pena... Você errou!!!" +
-                                           "O número que eu pensei é menor.";
-                numeroTentativas--;
-                lblNumeroTentativas.Text = numeroTentativas.ToString();
-            }
-            else
-            {
-                VerificacaoDeDerrota();
-                lblTituloInterativo.Text = "Que pena... Você errou!!!" +
-                                           "O número que eu pensei é maior.";
-                numeroTentativas--;
-                lblNumeroTentativas.Text = numeroTentativas.ToString();
-            }
-            ltbNumerosTentados.Items.Add(numeroChute);
-            txtChutarValorAleatorio.Clear();
         }
 
         private void VerificacaoDeDerrota()
@@ -68,25 +41,39 @@ namespace Adivinhe_se_Puder
             {
                 MessageBox.Show("Que trisque, Você perdeu!!!", "DERROTA");
                 txtChutarValorAleatorio.Enabled = false;
-                btnTestarChute.Enabled = false;
+                btnGerarValorAleatorio.Enabled = true;
             }
         }
 
-        private void btnJogarDeNovo_Click(object sender, EventArgs e)
+        private void txtChutarValorAleatorio_KeyDown(object sender, KeyEventArgs e)
         {
-            btnGerarValorAleatorio.Enabled = true;
-
-            txtChutarValorAleatorio.Enabled = false;
-            txtChutarValorAleatorio.Clear();
-
-            btnTestarChute.Enabled = false;
-
-            ltbNumerosTentados.Items.Clear();
-
-            lblTituloInterativo.Text = "Adivinhe se Puder!";
-            btnJogarDeNovo.Enabled = false;
-            numeroTentativas = 3;
-            lblNumeroTentativas.Text = numeroTentativas.ToString();
+            if (e.KeyCode == Keys.Return && txtChutarValorAleatorio.Text != "")
+            {
+                if (int.Parse(txtChutarValorAleatorio.Text) == numeroSorteado)
+                {
+                    MessageBox.Show("VOCÊ ACERTOU!!!", "PARABÉNS");
+                    txtChutarValorAleatorio.Enabled = false;
+                    btnGerarValorAleatorio.Enabled = true;
+                }
+                else if (int.Parse(txtChutarValorAleatorio.Text) > numeroSorteado)
+                {
+                    VerificacaoDeDerrota();
+                    lblTituloInterativo.Text = "Que pena... Você errou!!!" +
+                                               "O número que eu pensei é menor.";
+                    numeroTentativas--;
+                    lblNumeroTentativas.Text = numeroTentativas.ToString();
+                }
+                else
+                {
+                    VerificacaoDeDerrota();
+                    lblTituloInterativo.Text = "Que pena... Você errou!!!" +
+                                               "O número que eu pensei é maior.";
+                    numeroTentativas--;
+                    lblNumeroTentativas.Text = numeroTentativas.ToString();
+                }
+                ltbNumerosTentados.Items.Add(txtChutarValorAleatorio.Text);
+                txtChutarValorAleatorio.Clear();
+            }
         }
     }
 }

@@ -32,10 +32,8 @@ namespace Adivinhe_se_Puder
             this.lblTituloInterativo = new System.Windows.Forms.Label();
             this.btnGerarValorAleatorio = new System.Windows.Forms.Button();
             this.txtChutarValorAleatorio = new System.Windows.Forms.TextBox();
-            this.btnTestarChute = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.ltbNumerosTentados = new System.Windows.Forms.ListBox();
-            this.btnJogarDeNovo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNumeroTentativas = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -53,41 +51,30 @@ namespace Adivinhe_se_Puder
             // btnGerarValorAleatorio
             // 
             this.btnGerarValorAleatorio.Font = new System.Drawing.Font("Miriam CLM", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnGerarValorAleatorio.Location = new System.Drawing.Point(23, 190);
+            this.btnGerarValorAleatorio.Location = new System.Drawing.Point(173, 196);
             this.btnGerarValorAleatorio.Name = "btnGerarValorAleatorio";
-            this.btnGerarValorAleatorio.Size = new System.Drawing.Size(124, 83);
+            this.btnGerarValorAleatorio.Size = new System.Drawing.Size(124, 50);
             this.btnGerarValorAleatorio.TabIndex = 3;
-            this.btnGerarValorAleatorio.Text = "Iniciar";
+            this.btnGerarValorAleatorio.Text = "Jogar";
             this.btnGerarValorAleatorio.UseVisualStyleBackColor = true;
             this.btnGerarValorAleatorio.Click += new System.EventHandler(this.btnGerarValorAleatorio_Click);
             // 
             // txtChutarValorAleatorio
             // 
             this.txtChutarValorAleatorio.Enabled = false;
-            this.txtChutarValorAleatorio.Font = new System.Drawing.Font("Miriam CLM", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtChutarValorAleatorio.Location = new System.Drawing.Point(178, 123);
+            this.txtChutarValorAleatorio.Font = new System.Drawing.Font("Miriam CLM", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtChutarValorAleatorio.Location = new System.Drawing.Point(185, 129);
             this.txtChutarValorAleatorio.Name = "txtChutarValorAleatorio";
-            this.txtChutarValorAleatorio.Size = new System.Drawing.Size(100, 45);
-            this.txtChutarValorAleatorio.TabIndex = 4;
+            this.txtChutarValorAleatorio.Size = new System.Drawing.Size(100, 51);
+            this.txtChutarValorAleatorio.TabIndex = 11;
             this.txtChutarValorAleatorio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnTestarChute
-            // 
-            this.btnTestarChute.Enabled = false;
-            this.btnTestarChute.Font = new System.Drawing.Font("Miriam CLM", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTestarChute.Location = new System.Drawing.Point(153, 190);
-            this.btnTestarChute.Name = "btnTestarChute";
-            this.btnTestarChute.Size = new System.Drawing.Size(125, 83);
-            this.btnTestarChute.TabIndex = 5;
-            this.btnTestarChute.Text = "Chutar";
-            this.btnTestarChute.UseVisualStyleBackColor = true;
-            this.btnTestarChute.Click += new System.EventHandler(this.btnTestarChute_Click);
+            this.txtChutarValorAleatorio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtChutarValorAleatorio_KeyDown);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Miriam CLM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(109, 292);
+            this.label2.Location = new System.Drawing.Point(137, 262);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 27);
             this.label2.TabIndex = 6;
@@ -98,22 +85,10 @@ namespace Adivinhe_se_Puder
             this.ltbNumerosTentados.Font = new System.Drawing.Font("Miriam CLM", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltbNumerosTentados.FormattingEnabled = true;
             this.ltbNumerosTentados.ItemHeight = 29;
-            this.ltbNumerosTentados.Location = new System.Drawing.Point(131, 322);
+            this.ltbNumerosTentados.Location = new System.Drawing.Point(168, 292);
             this.ltbNumerosTentados.Name = "ltbNumerosTentados";
             this.ltbNumerosTentados.Size = new System.Drawing.Size(135, 91);
             this.ltbNumerosTentados.TabIndex = 7;
-            // 
-            // btnJogarDeNovo
-            // 
-            this.btnJogarDeNovo.Enabled = false;
-            this.btnJogarDeNovo.Font = new System.Drawing.Font("Miriam CLM", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnJogarDeNovo.Location = new System.Drawing.Point(284, 190);
-            this.btnJogarDeNovo.Name = "btnJogarDeNovo";
-            this.btnJogarDeNovo.Size = new System.Drawing.Size(141, 83);
-            this.btnJogarDeNovo.TabIndex = 8;
-            this.btnJogarDeNovo.Text = "Jogar de novo";
-            this.btnJogarDeNovo.UseVisualStyleBackColor = true;
-            this.btnJogarDeNovo.Click += new System.EventHandler(this.btnJogarDeNovo_Click);
             // 
             // label1
             // 
@@ -138,13 +113,11 @@ namespace Adivinhe_se_Puder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 430);
+            this.ClientSize = new System.Drawing.Size(470, 399);
             this.Controls.Add(this.lblNumeroTentativas);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnJogarDeNovo);
             this.Controls.Add(this.ltbNumerosTentados);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnTestarChute);
             this.Controls.Add(this.txtChutarValorAleatorio);
             this.Controls.Add(this.btnGerarValorAleatorio);
             this.Controls.Add(this.lblTituloInterativo);
@@ -159,10 +132,8 @@ namespace Adivinhe_se_Puder
         private System.Windows.Forms.Label lblTituloInterativo;
         private System.Windows.Forms.Button btnGerarValorAleatorio;
         private System.Windows.Forms.TextBox txtChutarValorAleatorio;
-        private System.Windows.Forms.Button btnTestarChute;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox ltbNumerosTentados;
-        private System.Windows.Forms.Button btnJogarDeNovo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNumeroTentativas;
     }
